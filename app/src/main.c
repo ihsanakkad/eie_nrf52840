@@ -16,8 +16,8 @@ static const struct gpio_dt_spec led3 = GPIO_DT_SPEC_GET(LED3_NODE, gpios);
 int main(void) {
     int ret0, ret1, ret2, ret3;
 
-    if (!gpio_is_ready_dt(&led0)) || (!gpio_is_ready_dt(&led1)) ||
-     (!gpio_is_ready_dt(&led2)) || (!gpio_is_ready_dt(&led3)){
+    if (!gpio_is_ready_dt(&led0) || !gpio_is_ready_dt(&led1) ||
+     !gpio_is_ready_dt(&led2) || !gpio_is_ready_dt(&led3)){
         return -1;
     }
 
