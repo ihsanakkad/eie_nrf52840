@@ -42,6 +42,7 @@ int main(void) {
         return ret3;
     }
 
+    int count = 0;
 
     while (1) {
         gpio_pin_toggle_dt(&led0);
@@ -52,7 +53,16 @@ int main(void) {
 
         gpio_pin_toggle_dt(&led3);
 
-        k_msleep(1000);
+        k_msleep(500);
+
+        if (count % 2 == 0){
+            gpio_pin_toggle_dt(&led3);
+        
+        }
+
+
+    count ++;
+
     }
     
     return 0;
